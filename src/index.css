@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  input {
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  .netflix-input {
+    @apply w-full px-4 py-3 bg-netflix-gray-700 border border-netflix-gray-600 rounded text-white placeholder-netflix-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent;
+  }
+  
+  .netflix-button {
+    @apply w-full py-3 px-4 bg-netflix-red hover:bg-netflix-red-dark text-white font-semibold rounded transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black;
+  }
+  
+  .netflix-button-secondary {
+    @apply w-full py-3 px-4 bg-netflix-gray-600 hover:bg-netflix-gray-500 text-white font-semibold rounded transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black;
+  }
+}
